@@ -84,14 +84,9 @@ Diex is a cross‑platform mobile (and browser) application built with [Apache 
 
 ### In the Browser
 
-- **Quick**  
   ```bash
   cordova run browser
   ```
-- **Or using the bundled Nginx** (Windows):  
-  1. Run `nginx_start.bat`  
-  2. Open [http://localhost:8080](http://localhost:8080)  
-  3. To stop, run `nginx_quit.bat`
 
 ### On Android
 
@@ -109,17 +104,17 @@ Diex is a cross‑platform mobile (and browser) application built with [Apache 
 ├── config.xml           # Cordova project config
 ├── package.json         # npm & Cordova settings
 ├── platforms/           # cordova‑platform builds
+|      └── www/                 # web assets (HTML/CSS/JS)
+│           ├── index.html       # splash + main loader
+│           ├── *.html           # views: search, calendar, edit, manage
+│           ├── js/
+│           │   ├── database.js  # WebSQL setup & schema
+│           │   ├── init.js      # app initialization & event bindings
+│           │   ├── comman.js    # common utilities
+│           │   └── path.js      # client‑side routing
+│           ├── css/             # styling (framework, slick, select2, custom)
+│           └── img/             # images & icons
 ├── plugins/             # cordova plugins (whitelist, sqlite)
-├── www/                 # web assets (HTML/CSS/JS)
-│   ├── index.html       # splash + main loader
-│   ├── *.html           # views: search, calendar, edit, manage
-│   ├── js/
-│   │   ├── database.js  # WebSQL setup & schema
-│   │   ├── init.js      # app initialization & event bindings
-│   │   ├── comman.js    # common utilities
-│   │   └── path.js      # client‑side routing
-│   ├── css/             # styling (framework, slick, select2, custom)
-│   └── img/             # images & icons
 └── conf/                # nginx server config (for browser workflow)
 ```
 
