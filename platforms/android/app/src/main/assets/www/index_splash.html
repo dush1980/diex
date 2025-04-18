@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <link rel="stylesheet" href="css/framework.css">
+        <link rel="stylesheet" href="css/menu.css">
+        
+
+        <!-- script type="text/javascript" src="cordova.js"></script -->
+        <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+        <!-- script src="js/jquery.mobile-1.4.5.min.js"></script -->
+        <!-- script src="js/jquery.js"></script -->
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/plugins.js"></script>
+        <script type="text/javascript" src="js/custom.js"></script>
+        <title>Diex</title>
+    </head>
+    
+    <body>
+        <div id="page-transitions">
+    
+            <div class="page-preloader page-preloader-light">
+                <img class="page-preload" src="images/preload.gif">
+            </div>
+            <div class="header header-light">
+                <a href="#" class="header-icon-1 show-left-sidebar"><i class="fa fa-navicon"></i></a>
+                <a href="#" class="header-logo">12th Jan 2022</a>
+                <a href="#" class="header-icon-4 show-right-sidebar"><i class="fa fa-envelope-o"></i></a>
+            </div>
+            <div id="page-content" class="page-content">
+                <div id="page-content-scroll">
+                    <div class="splash-screen cover-screen container-fullscreen no-bottom" style="background-image:url(images/pictures/1.jpg);">
+                        <div class="splash-content">
+                            <a href="#" class="splash-logo scale-hover"><img class="preload-image" data-original="images/preload-logo.png" alt="img"></a>
+                            <h4>Meet <strong class="color-red-light">SideBars</strong></h4>
+                            <h5>Mobile & Tablet Site Template</h5>
+                            <p>
+                                A simple and intitutive template designed to make your work faster
+                                easier, and to produce results that mimic and work at the speed
+                                of a native application! 
+                            </p>
+                            <a class="splash-button" href="index.html">Get started</a>
+                        </div>
+                        <div class="overlay"></div>
+                    </div>
+                </div>
+            </div>
+       
+        </div>
+
+    </body>
+</html>

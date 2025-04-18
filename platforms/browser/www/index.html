@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <link rel="stylesheet" href="css/framework.css">
+        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="css/style.css">        
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>        
+        <!-- <script type="text/javascript" src="js/plugins.js"></script> -->
+        <script type="text/javascript" src="js/slick.min.js"></script>   
+        <script type="text/javascript" src="js/comman.js"></script> 
+        <script type="text/javascript" src="js/database.js"></script>   
+        <script type="text/javascript" src="js/checkload.js"></script>
+        <script type="text/javascript" src="js/path.js"></script>
+        <script type="text/javascript" src="js/init.js"></script>
+        
+        <title>Diex</title>
+    </head>
+    
+    <body>    
+        <div class="page-preloader page-preloader-light">
+            <img class="page-preload" src="img/preload.gif">
+        </div>
+        
+        <!-- Top -->
+        <div class="header header-light">
+            <a href="#" class="header-icon-1 show-left-sidebar"><i class="fa fa-navicon"></i></a>
+            <a href="#" class="header-logo"></a>
+            <a href="#" class="header-icon-4 show-right-sidebar"><i class="fa fa-search"></i></a>
+        </div>
+        
+        <!-- Body -->
+        <div id="page-content" class="page-content">
+            <div id="page-content-scroll">
+                <!-- BODY-->
+                <h3>Home</h3>
+            </div>
+        </div>
+
+        <!--Material Menu Right. Can be moved higher if needed but not inside sidebars -->    
+        <div class="material-menu material-menu-right material-menu-light">
+            <a href="#" class="material-menu-deploy show-modal-menu">
+                <i class="fa fa-plus bg-green-dark"></i>
+            </a>
+        </div>
+
+        <!-- Left Menu -->
+        <div class="sidebar-left">
+            <div class="sidebar-scroll-left sidebar-light-clean">                         
+                <p id = "sidebar-left-title" class="sidebar-divider"><!-- current date --></p>
+                <div class="sidebar-menu">
+                    <!-- <div class="has-submenu">
+                        <a class="menu-item show-submenu" href="#">
+                            <i class="fa fa-home bg-red-dark"></i>
+                            <em>Homepages</em>
+                            <strong>12</strong>
+                        </a> 
+                        <div class="submenu submenu-active">
+                            <a class="submenu-item submenu-item-active" href="index.html">          <i class="fa fa-angle-right"></i><em>   Classic         </em><i class="fa fa-circle"></i></a>
+                            <a class="submenu-item" href="index-circle.html">   <i class="fa fa-angle-right"></i><em>   Round           </em><i class="fa fa-circle"></i></a>
+                            <a class="submenu-item" href="index-image.html">    <i class="fa fa-angle-right"></i><em>   Image           </em><i class="fa fa-circle"></i></a>
+                            <a class="submenu-item" href="index-video.html">    <i class="fa fa-angle-right"></i><em>   Video           </em><i class="fa fa-circle"></i></a>                        
+                            <a class="submenu-item" href="index-news.html">     <i class="fa fa-angle-right"></i><em>   News            </em><i class="fa fa-circle"></i></a>
+                            <a class="submenu-item" href="index-shop.html">     <i class="fa fa-angle-right"></i><em>   Store           </em><i class="fa fa-circle"></i></a>
+                            <a class="submenu-item" href="index-cover.html">    <i class="fa fa-angle-right"></i><em>   Cover Slider    </em><i class="fa fa-circle"></i></a>
+                            <a class="submenu-item" href="index-login.html">    <i class="fa fa-angle-right"></i><em>   Login Screen    </em><i class="fa fa-circle"></i></a>
+                            <a class="submenu-item" href="index-signup.html">   <i class="fa fa-angle-right"></i><em>   Signup Screen   </em><i class="fa fa-circle"></i></a>
+                            <a class="submenu-item" href="index-landing.html">  <i class="fa fa-angle-right"></i><em>   Landing Page    </em><i class="fa fa-circle"></i></a>                        
+                            <a class="submenu-item" href="index-splash.html">   <i class="fa fa-angle-right"></i><em>   Splash Screen   </em><i class="fa fa-circle"></i></a>
+                            <a class="submenu-item" href="index-mobile.html">   <i class="fa fa-angle-right"></i><em>   Home Screen     </em><i class="fa fa-circle"></i></a>
+                        </div>
+                    </div>   -->
+                    <a class="menu-item" href="#calendar_entries?tommyle=dush&brad=pitt" data-closemenu = true>
+                        <i class="fa fa-home bg-red-dark"></i>
+                        <em>Back to Today</em>
+                    </a>                                 
+                    <a class="menu-item" href="#calendar" data-closemenu = true>
+                        <i class="fa fa-calendar bg-green-dark"></i>
+                        <em>Open Calender</em>
+                    </a>                 
+                    <a class="menu-item" href="#manage_indexes" data-closemenu = true>
+                        <i class="fa fa-th-list bg-blue-dark"></i>
+                        <em>Manage Index</em>
+                    </a>                
+                    <a class="menu-item" href="#help" data-closemenu = true>
+                        <i class="fa fa-question bg-orange-dark"></i>
+                        <em>Help</em>
+                    </a>
+                    <a class="menu-item" href="#about">
+                        <i class="fa fa-info bg-blue-light"></i>
+                        <em>About Diex</em>
+                    </a>                
+                    <a class="menu-item close-sidebar" href="#" data-closemenu = true>
+                        <i class="fa fa-times bg-red-dark"></i>
+                        <em>Close Menu</em>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Menu -->
+        <div class="sidebar-right">
+            <div class="sidebar-scroll-right sidebar-light-clean">     
+                <p class="sidebar-divider">Select the Index</p>
+                <div class="sidebar-menu">
+                    <a class="default-link menu-item" href="#search_entries">
+                        <i class="fa fa-facebook facebook-color"></i>
+                        <em>Facebook</em>
+                    </a>                   
+                    <a class="default-link menu-item" href="#search_entries">
+                        <i class="fa fa-twitter twitter-color"></i>
+                        <em>Twitter</em>
+                    </a>                 
+                    <a class="default-link menu-item" href="#search_entries">
+                        <i class="fa fa-google-plus google-color"></i>
+                        <em>Google Plus</em>
+                    </a>                    
+                    <a class="default-link menu-item" href="#search_entries">
+                        <i class="fa fa-youtube-play youtube-color"></i>
+                        <em>YouTube</em>
+                    </a>    
+                </div>
+            </div>
+        </div>
+
+        <!--Modal Menu -->
+        <div class="modal-menu modal-menu-light">
+            <div class="modal-title"><h3>Title here</h3></div>
+            <div class="modal-body">
+                <div class="form" >
+                    <input class="text-field green-field" type="text" placeholder="Index Name" value="">
+            
+                    <select class="text-field green-field" name="cars">
+                        <option value="">-- Select a Colour</option>
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                    </select>
+            
+                    <select class="text-field green-field" name="cars">
+                        <option value="">-- Select a Icon</option>
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="button button-red button-round float-left">Cancel</a>
+                <a href="#" class="button button-green button-round float-right">Save</a>
+            </div>
+            
+        </div>
+        <!--Modal Menu Background. Must be under modal menu items-->
+        <div class="modal-menu-background modal-menu-light-background"></div>
+
+        <!-- Back to Top -->
+        <a href="#" class="back-to-top-badge"><i class="fa fa-caret-up"></i>Back to top</a>
+    </body>
+</html>
