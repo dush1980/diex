@@ -14,6 +14,8 @@ Diex is a cross‑platform mobile (and browser) application built with [Apache 
 
 > Diex stands for “Diary Index”—it helps you index, browse and manage your diary contents.
 
+---
+
 ## Features
 
 - Add, edit and delete diary entries  
@@ -23,6 +25,8 @@ Diex is a cross‑platform mobile (and browser) application built with [Apache 
 - Manage your own set of indexes (create, rename, delete)  
 - Works offline using WebSQL  
 - Runs in both browser and native Android (and iOS stubbed)  
+
+---
 
 ## Table of Contents
 
