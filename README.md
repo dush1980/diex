@@ -24,12 +24,6 @@ Diex is a cross‑platform mobile (and browser) application built with [Apache 
 - Works offline using WebSQL  
 - Runs in both browser and native Android (and iOS stubbed)  
 
-## Screenshots
-
-![Search Entries](https://placehold.it/400x800?text=Search+Entries)  
-![Calendar View](https://placehold.it/400x800?text=Calendar+View)  
-![Manage Indexes](https://placehold.it/400x800?text=Manage+Indexes)
-
 ## Table of Contents
 
 1. [Prerequisites](#prerequisites)  
